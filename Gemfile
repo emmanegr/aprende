@@ -22,6 +22,8 @@ gem 'coffee-rails', '4.0.1'
 
 gem 'bootstrap-sass', '3.3.5'
 
+gem 'haml'
+
 gem 'jade-rails', '1.9.2.0'
 
 gem 'sprockets', '2.12.4'
