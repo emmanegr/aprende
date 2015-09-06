@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require bootstrap-sprockets
+//= require jquery.lazylinepainter-1.5.1.min
+//= require rAF-polyfil
+//= require jquery.gridder
+//= require general
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
