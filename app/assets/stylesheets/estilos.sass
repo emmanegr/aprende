@@ -1,0 +1,323 @@
+*
+	margin: 0
+	padding: 0
+ul
+	-webkit-margin-start: 0 !important
+
+
+$gris_obscuro: #353535
+
+$verde: #A5D05E
+
+$gris_claro: #494949
+
+@each $font-face in 'mohave-webfont', 'mohave-bold-webfont', 'marion_regular-webfont'
+	@font-face 
+		font-family: $font-face
+		src: url('/fonts/#{$font-face}.eot')
+		src: url('/fonts/#{$font-face}.eot?') format('eot')
+		src: url('/fonts/#{$font-face}.woff') format('woff')
+		src: url('/fonts/#{$font-face}.ttf')  format('truetype')
+		font-style: normal
+		font-weight: normal
+
+$mohave_regular: 'mohave-webfont', Arial, sans-serif
+
+$mohave_bold: 'mohave-bold-webfont', Arial, sans-serif
+
+$marion: 'marion_regular-webfont', Times New Roman, Times, serif
+
+body, .titulo
+	padding-top: 50px
+.centrado_descripcion_proyecto
+	margin: 0 auto
+	max-width: 550px
+	padding: 30px
+
+.logo_numedi_stroke
+	background-color: $verde
+	background-image: url('../img/fondo_numedia_jumbo.png')
+	background-position: 50% 50%
+	background-repeat: no-repeat
+	background-size: cover
+	display: block
+	height: 450px
+	padding: 150px 0 0 0
+	text-align: center
+
+.logo_principal
+	img
+		width: 155px
+
+.imagen_proyecto_galeria
+	width: 100%
+
+.proyectos
+	border: 1px solid red
+
+.navbar-brand
+	padding: 0 15px
+	height: auto
+
+.col_centered
+	float: none
+	margin: 0 auto
+	text-align: center
+
+.fondo_gris
+	background: $gris_obscuro
+
+.tipo_proyecto
+	background-color: $verde
+	border: 0.15em solid $verde
+	color: $gris_claro
+	display: inline-block
+	font-family: $mohave_regular
+	font-size: 1.1em
+	letter-spacing: 5px
+	margin: 5px 6px
+	padding: 10px 30px
+	text-align: center
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+	transition: all 1s
+	-moz-transition: all 1s
+	-webkit-transition: all 1s
+
+.tipo_proyecto:hover
+	background-color: #fff
+	color: $gris_obscuro
+	cursor: pointer
+	letter-spacing: 8px
+
+.row_centrado
+	margin: auto
+
+.galeria_proyectos
+	border: 1px solid green
+
+.contenido_proyectos
+	display: none
+
+.gridder
+	-webkit-padding-start: 0px
+	li
+		display: inline-block
+		list-style: none
+		width: 33.33%
+		img
+			width: 100%
+.gridder-padding
+	padding: 8px 0
+	background-color: $verde
+
+
+
+
+.gridder-show
+	background: #EEE
+	display: block
+	float: left
+	position: relative
+	width: 100%
+
+.gridder-show.loading
+	background: $verde url("../img/loading-spin.svg") no-repeat center
+
+.hasSelectedItem .gridder-list
+	opacity: .5
+
+.gridder-list
+	filter: gray
+	filter: grayscale(100%)
+	filter: url(desaturate.svg#greyscale)
+	-webkit-filter: grayscale(100%)
+	opacity: 0.5
+	-webkit-transition: all 1s
+	-moz-transition: all 1s
+	transition: all 1s
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+
+.hasSelectedItem .gridder-list.selectedItem
+	opacity: 1
+	filter: grayscale(0%)
+	-webkit-filter: grayscale(0%)
+
+.gridder-list:hover
+	cursor: pointer
+	filter: gray
+	filter: grayscale(0%)
+	-webkit-filter: grayscale(0%)
+	opacity: 1
+
+.gridder-navigation
+	text-align: right
+	background-color: $gris_obscuro
+
+.gridder-close
+	img
+		width: 40px
+
+.gris_abajo
+	height: 40px
+	background: $gris_obscuro
+
+.wrap_ver_mas
+	margin: 0 auto
+	width: 250px
+	text-align: center
+
+.boton_ver_mas
+	border: 2px solid white
+	color: white
+	background: $gris_obscuro
+	font-family: $mohave_regular
+	font-size: 1.4em
+	padding: 5px 0
+	margin-top: 30px
+	transition: all 1s
+	letter-spacing: 10px
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+
+.boton_ver_mas:hover
+	background: transparent
+	border: 2px solid $verde
+	color: $verde
+	cursor: pointer
+	letter-spacing: 15px
+
+.lista_tipo_proyecto
+	margin-top: 10px
+	text-align: center
+	li
+		font-family: $marion
+		color: $verde
+
+.titulo_proyecto
+	color: white
+	font-family: $mohave_bold
+	font-size: 2.5em
+	padding-bottom: 10px
+	text-align: center
+
+.servicios
+	padding-bottom: 50px
+
+.descripcion_proyecto
+	color: white
+	font-family: $marion
+	font-size: 1.2em
+	margin-top: 20px
+	text-align: justify
+
+h1.titulo_principal
+	font-family: $mohave_bold
+	letter-spacing: 8px
+	padding: 50px 0 10px 0
+	text-align: center
+
+
+.contacto
+	z-index: 1
+	margin-top: -700px
+	padding: 10px
+	position: relative
+
+
+.imagen_logo
+	width: 300px
+	margin: 0 auto
+	img
+		margin-bottom: 40px
+		width: 100%
+
+.formulario
+	max-width: 400px
+	margin: 0 auto
+
+.texto_input, .text_are_input
+	background-color: rgba(51, 51, 51, 0.95)
+	border: none
+	color: white
+	display: inline-block
+	font-family: $marion
+	font-size: 1.5em
+	margin: 0 0 10px 0
+	padding: 10px 0 10px 5px
+	width: 100%
+
+.text_are_input
+	height: 250px
+	resize: none
+
+.submit_input
+	background: $gris_obscuro
+	border: none
+	color: $verde
+	font-family: $mohave_regular
+	font-size: 1.5em
+	letter-spacing: 10px
+	letter-spacing: 5px
+	padding: 5px 15px 1px 15px
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1)
+	transition: all 1s
+	vertical-align: middle
+	float: right
+
+.submit_input:hover
+	background: $verde
+	color: $gris_obscuro
+	border: 2px solid $gris_obscuro
+	letter-spacing: 8px
+
+.wrap_maps
+	height: 700px
+	width: 100%
+	border: 1px solid red
+
+#map
+	height: 700px
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 0
+
+
+// FOOTER
+
+.footer
+	background: $gris_obscuro
+	padding: 200px 0 80px 0
+
+.wrap_botones_footer
+	margin: 0 auto
+	text-align: center
+
+.sociales_fila
+	margin: 20px 10px
+	a
+		margin: 10px
+	img
+		width: 40px
+
+.correo_numedia
+	color: $verde
+	font-family: $mohave_regular
+	font-size: 1.3em
+	letter-spacing: 6px
+
+.wrap_n_numedia
+	width: 160px
+	margin: 0 auto
+	img
+		padding: 60px 0 0 0
+		width: 100%
+
+@media (max-width: 600px)
+	.logo_numedi_stroke
+		height: 350px
+		padding: 100px 0 0 0
+
+	.gridder
+		li
+			width: 50%
+

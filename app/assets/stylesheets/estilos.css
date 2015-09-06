@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  -webkit-margin-start: 0 !important;
+}
+
+@font-face {
+  font-family: "mohave-webfont";
+  src: url("/fonts/mohave-webfont.eot");
+  src: url("/fonts/mohave-webfont.eot?") format("eot");
+  src: url("/fonts/mohave-webfont.woff") format("woff");
+  src: url("/fonts/mohave-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "mohave-bold-webfont";
+  src: url("/fonts/mohave-bold-webfont.eot");
+  src: url("/fonts/mohave-bold-webfont.eot?") format("eot");
+  src: url("/fonts/mohave-bold-webfont.woff") format("woff");
+  src: url("/fonts/mohave-bold-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "marion_regular-webfont";
+  src: url("/fonts/marion_regular-webfont.eot");
+  src: url("/fonts/marion_regular-webfont.eot?") format("eot");
+  src: url("/fonts/marion_regular-webfont.woff") format("woff");
+  src: url("/fonts/marion_regular-webfont.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+body, .titulo {
+  padding-top: 50px;
+}
+
+.centrado_descripcion_proyecto {
+  margin: 0 auto;
+  max-width: 550px;
+  padding: 30px;
+}
+
+.logo_numedi_stroke {
+  background-color: #a5d05e;
+  background-image: url("../img/fondo_numedia_jumbo.png");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  height: 450px;
+  padding: 150px 0 0 0;
+  text-align: center;
+}
+
+.logo_principal img {
+  width: 155px;
+}
+
+.imagen_proyecto_galeria {
+  width: 100%;
+}
+
+.proyectos {
+  border: 1px solid red;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: auto;
+}
+
+.col_centered {
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.fondo_gris {
+  background: #353535;
+}
+
+.tipo_proyecto {
+  background-color: #a5d05e;
+  border: 0.15em solid #a5d05e;
+  color: #494949;
+  display: inline-block;
+  font-family: "mohave-webfont", Arial, sans-serif;
+  font-size: 1.1em;
+  letter-spacing: 5px;
+  margin: 5px 6px;
+  padding: 10px 30px;
+  text-align: center;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition: all 1s;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+}
+
+.tipo_proyecto:hover {
+  background-color: white;
+  color: #353535;
+  cursor: pointer;
+  letter-spacing: 8px;
+}
+
+.row_centrado {
+  margin: auto;
+}
+
+.galeria_proyectos {
+  border: 1px solid green;
+}
+
+.contenido_proyectos {
+  display: none;
+}
+
+.gridder {
+  -webkit-padding-start: 0px;
+}
+.gridder li {
+  display: inline-block;
+  list-style: none;
+  width: 33.33%;
+}
+.gridder li img {
+  width: 100%;
+}
+
+.gridder-padding {
+  padding: 8px 0;
+  background-color: #a5d05e;
+}
+
+.gridder-show {
+  background: #eeeeee;
+  display: block;
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.gridder-show.loading {
+  background: #a5d05e url("../img/loading-spin.svg") no-repeat center;
+}
+
+.hasSelectedItem .gridder-list {
+  opacity: 0.5;
+}
+
+.gridder-list {
+  filter: gray;
+  filter: grayscale(100%);
+  filter: url(desaturate.svg#greyscale);
+  -webkit-filter: grayscale(100%);
+  opacity: 0.5;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  transition: all 1s;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.hasSelectedItem .gridder-list.selectedItem {
+  opacity: 1;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
+.gridder-list:hover {
+  cursor: pointer;
+  filter: gray;
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  opacity: 1;
+}
+
+.gridder-navigation {
+  text-align: right;
+  background-color: #353535;
+}
+
+.gridder-close img {
+  width: 40px;
+}
+
+.gris_abajo {
+  height: 40px;
+  background: #353535;
+}
+
+.wrap_ver_mas {
+  margin: 0 auto;
+  width: 250px;
+  text-align: center;
+}
+
+.boton_ver_mas {
+  border: 2px solid white;
+  color: white;
+  background: #353535;
+  font-family: "mohave-webfont", Arial, sans-serif;
+  font-size: 1.4em;
+  padding: 5px 0;
+  margin-top: 30px;
+  transition: all 1s;
+  letter-spacing: 10px;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.boton_ver_mas:hover {
+  background: transparent;
+  border: 2px solid #a5d05e;
+  color: #a5d05e;
+  cursor: pointer;
+  letter-spacing: 15px;
+}
+
+.lista_tipo_proyecto {
+  margin-top: 10px;
+  text-align: center;
+}
+.lista_tipo_proyecto li {
+  font-family: "marion_regular-webfont", Times New Roman, Times, serif;
+  color: #a5d05e;
+}
+
+.titulo_proyecto {
+  color: white;
+  font-family: "mohave-bold-webfont", Arial, sans-serif;
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.servicios {
+  padding-bottom: 50px;
+}
+
+.descripcion_proyecto {
+  color: white;
+  font-family: "marion_regular-webfont", Times New Roman, Times, serif;
+  font-size: 1.2em;
+  margin-top: 20px;
+  text-align: justify;
+}
+
+h1.titulo_principal {
+  font-family: "mohave-bold-webfont", Arial, sans-serif;
+  letter-spacing: 8px;
+  padding: 50px 0 10px 0;
+  text-align: center;
+}
+
+.contacto {
+  z-index: 1;
+  margin-top: -700px;
+  padding: 10px;
+  position: relative;
+}
+
+.imagen_logo {
+  width: 300px;
+  margin: 0 auto;
+}
+.imagen_logo img {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.formulario {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.texto_input, .text_are_input {
+  background-color: rgba(51, 51, 51, 0.95);
+  border: none;
+  color: white;
+  display: inline-block;
+  font-family: "marion_regular-webfont", Times New Roman, Times, serif;
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  padding: 10px 0 10px 5px;
+  width: 100%;
+}
+
+.text_are_input {
+  height: 250px;
+  resize: none;
+}
+
+.submit_input {
+  background: #353535;
+  border: none;
+  color: #a5d05e;
+  font-family: "mohave-webfont", Arial, sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 10px;
+  letter-spacing: 5px;
+  padding: 5px 15px 1px 15px;
+  transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  transition: all 1s;
+  vertical-align: middle;
+  float: right;
+}
+
+.submit_input:hover {
+  background: #a5d05e;
+  color: #353535;
+  border: 2px solid #353535;
+  letter-spacing: 8px;
+}
+
+.wrap_maps {
+  height: 700px;
+  width: 100%;
+  border: 1px solid red;
+}
+
+#map {
+  height: 700px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.footer {
+  background: #353535;
+  padding: 200px 0 80px 0;
+}
+
+.wrap_botones_footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sociales_fila {
+  margin: 20px 10px;
+}
+.sociales_fila a {
+  margin: 10px;
+}
+.sociales_fila img {
+  width: 40px;
+}
+
+.correo_numedia {
+  color: #a5d05e;
+  font-family: "mohave-webfont", Arial, sans-serif;
+  font-size: 1.3em;
+  letter-spacing: 6px;
+}
+
+.wrap_n_numedia {
+  width: 160px;
+  margin: 0 auto;
+}
+.wrap_n_numedia img {
+  padding: 60px 0 0 0;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .logo_numedi_stroke {
+    height: 350px;
+    padding: 100px 0 0 0;
+  }
+
+  .gridder li {
+    width: 50%;
+  }
+}
