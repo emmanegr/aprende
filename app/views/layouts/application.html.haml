@@ -1,0 +1,69 @@
+!!!
+%html
+	%head
+		%title= @titulo
+		%meta{:content => "Nt4yuNtUVNnw0CLw5m037M5M2xIGnehyYA8kWdeDmPY", :name => "google-site-verification"}
+		= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+		= javascript_include_tag 'application', 'data-turbolinks-track' => true
+		= csrf_meta_tags
+	%body
+		%nav.navbar.navbar-inverse.navbar-fixed-top
+			.container
+				.navbar-header
+					%button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+						%span.sr-only Toggle navigation
+						%span.icon-bar
+						%span.icon-bar
+						%span.icon-bar
+					%a.navbar-brand.logo_principal(href='#')
+						%img(src="../img/logo_1.png")
+		%section.logo_numedi_stroke
+			%objects
+				%embed(src="/img/logo_numedia.svg")
+		= yield
+		
+		%section.wrap_maps
+			%section#map
+		%section.contacto
+			%h1.titulo_principal.fondo_contacto CONTACTO
+			.container
+				.row
+					.col-md-6
+						.imagen_logo
+							img(src="img/logo_numedi_gris.jpg")
+					.col-md-6
+						.formulario
+							%form.formulario_numedia(method="POST" action="")
+								%input.texto_input(type="text" name="nombre" placeholder="nombre" required)
+								%input.texto_input(type="email" name="correo" placeholder="email" required)
+								%textarea.text_are_input(name="mensaje" placeholder="mensaje" required)
+								%input.submit_input(type="submit" name="enaviar" value="ENVIAR")
+		%section.footer
+			.container
+				.row
+					.col-md-6
+						.wrap_botones_footer
+							.correo_numedia PROYECTOS
+							.correo_numedia SERVICIOS
+							.correo_numedia CONTACTO
+						.wrap_botones_footer
+							.sociales_fila
+								%a(href="www.facebook.com")
+									%img(src="img/btn_face.png")
+								%a(href="www.behance.com")
+									%img(src="img/btn_behance.png")
+							.sociales_fila
+								%a(href="www.linkedin.com")
+									%img(src="img/btn_linke.png")
+								%a(href="www.instagram.com")
+									%img(src="img/btn_insta.png")
+						.wrap_botones_footer
+							.correo_numedia HOLA@NUMEDIA.COM
+							.correo_numedia 477 7 87 45 93
+					.col-md-6
+						.wrap_n_numedia
+							%img(src="img/n_numedia_blanco.png")
+
+		%script{:type => "text/javascript", :src => "https://maps.googleapis.com/maps/api/js?sensor=false"}
+
+
