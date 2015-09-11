@@ -1,7 +1,7 @@
 class ContacotsController < ApplicationController
-	def nuevo
+	def new
 	end
 
-	def editar
+	def edit
 	end
 end
