@@ -1,0 +1,22 @@
+%h1.titulo_principal.fondo_contacto CONTACTO
+.container
+	.row
+		.col-md-6
+			.imagen_logo
+				img(src="img/logo_numedi_gris.jpg")
+		.col-md-6
+			.formulario
+				= form_for @contacto, :html => {:class => 'formulario_numedia'} do |f|
+					= f.label :nombre 
+					= f.text_field :nombre, required:true, :placeholder => "nombre", class: "texto_input" 
+					%br
+					= f.label :email 
+					= f.text_field :email, required:true, required:true, :placeholder => "email", class: "texto_input" 
+					%br
+					= f.label :mensaje 
+					= f.text_area :mensaje, as: :text , required:true, :placeholder => "mensaje", class: "text_are_input" 
+					.hidden
+						= f.label :nickname 
+						= f.text_field :nickname, hint: 'Deja este espacio en blanco ;)' 
+					%br
+					= f.submit 'ENVIAR', class: 'submit_input'

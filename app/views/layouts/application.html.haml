@@ -33,11 +33,21 @@
 							img(src="img/logo_numedi_gris.jpg")
 					.col-md-6
 						.formulario
-							%form.formulario_numedia(method="POST" action="")
-								%input.texto_input(type="text" name="nombre" placeholder="nombre" required)
-								%input.texto_input(type="email" name="correo" placeholder="email" required)
-								%textarea.text_are_input(name="mensaje" placeholder="mensaje" required)
-								%input.submit_input(type="submit" name="enaviar" value="ENVIAR")
+							= form_for Contacto.new, :html => {:class => 'formulario_numedia'} do |f|
+								= f.label :nombre 
+								= f.text_field :nombre, required:true, :placeholder => "nombre", class: "texto_input" 
+								%br
+								= f.label :email 
+								= f.text_field :email, required:true, required:true, :placeholder => "email", class: "texto_input" 
+								%br
+								= f.label :mensaje 
+								= f.text_area :mensaje, as: :text , required:true, :placeholder => "mensaje", class: "text_are_input" 
+								.hidden
+									= f.label :nickname 
+									= f.text_field :nickname, hint: 'Deja este espacio en blanco ;)' 
+								%br
+								= f.submit 'ENVIAR', class: 'submit_input' 
+							end 
 		%section.footer
 			.container
 				.row

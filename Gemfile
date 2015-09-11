@@ -13,6 +13,8 @@ group :production do
 	gem 'rails_12factor'
 end
 
+gem 'mail_form', '1.5.1'
+
 # Use SCSS for stylesheets
 gem 'sass', '3.4.18'
 # Use Uglifier as compressor for JavaScript assets
